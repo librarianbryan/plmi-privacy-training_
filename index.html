@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>PLMI Privacy Training 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black2017.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<section>
+<section>
+	<aside class="notes">Hi! I'm Bryan... We're going to talk about how libraries view privacy and how the law here in TN views privacy. We'll explore threat models, and how to think about patron privacy. Finally, we're cover some general principles of computer security that you can apply to your libraries' and your personal lives. This will be interactive. We'll mix it up. Exercise 1:
+		"Are you a privacy vegan or a privacy nihilist... "
+		"A parent without ID wants to see their child's record... "
+		"A law enforcement officer with ID but no warrant wants to see a patron record... "
+		"A "bounty hunter" wants to see a patron record a patron record... "
+	</aside>
+<h3>EVERYDAY</br>
+PR<span style=text-transform:lowercase>I</span>VACY</br>
+</h3>
+<small>PLMi 2018</small></br>
+<p style="font-size:40%">Bryan Neil Jones</br>
+bryan.n.jones@nashville.gov</p>
+</section>
+</section>
+
+<section>
+<section>
+	<aside class="notes">Professionally speaking libraries have an ethical obligation to respect the privacy of their users. Here are some examples.</aside>
+<h3>ETH<span style=text-transform:lowercase>i</span>CS</h3>
+</section>
+
+<section>
+	<aside class="notes">Article 12: No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks.</aside>
+UN Declaration of Human Rights
+</section>
+
+<section>
+	<aside class="notes">Code of Ethics for Librarians and Other Information Professionals, Item 3: Librarians and other information workers respect personal privacy, and the protection of personal data, necessarily shared between individuals and institutions.The relationship between the library and the user is one of confidentiality and librarians and other information workers will take appropriate measures to ensure that user data is not shared beyond the original transaction.  Librarians and other information workers support and participate in transparency so that the workings of government, administration and business are opened to the scrutiny of the general public. They also recognize that it is in the public interest that misconduct, corruption and crime be exposed by what constitute breaches of confidentiality by so-called ‘whistleblowers’.</aside>
+IFLA Code of Ethics for Librarians</br>
+& Other Information Workers
+</section>
+
+<section>
+	<aside class="notes">The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</aside>
+US Constitution</br>
+Amendment #4
+</section>
+
+<section>
+	<aside class="notes">We protect each library user's right to privacy and confidentiality with respect to information sought or received and resources consulted, borrowed, acquired or transmitted.</aside>
+ALA Code of Ethics</br>
+Article #3
+</section>
+
+<section>
+	<aside class="notes">Confidentiality / Privacy</aside>
+TLA Core Values</br>
+Value #2
+</section>
+
+<section>
+	<aside class="notes">Encourage libraries to develop circulation policies and practices that ensure patron privacy. Encourage libraries to develop internet use policies that insure access while respecting patron privacy.</aside>
+TLA IF</br> Committee</br> charter
+</section>
+
+<section>
+<h3>ETH<span style=text-transform:lowercase>I</span>CS</h3>
+<h3 class="fragment">& THE LAW</h3>
+</section>
+
+<section>
+	<aside class="notes">Tennessee Code says you have to get a warrant to access library records.</aside>
+<img src="images/getawarrant.gif"></img>
+</section>
+
+<section>
+	<aside class="notes">These are immediate. Make sure it is from your state, signed, and dated. Make sure they are only looking for what the warrant says.</aside>
+warrant
+</section>
+
+<section>
+	<aside class="notes">Sometimes law enforcement have "exigent circumstances." That's their call. Do not physically interfere, but make it known verbally that you do not consent.</aside>
+no warrant</br>
+<span style="color: red"><b>WUT!</b></span>
+</section>
+
+<section>
+	<aside class="notes">These usually have a time frame and want specific information. Refer these to your legal council.</aside>
+subpoena
+</section>
+
+<section>
+	<aside class="notes">These have a built in gag order, but you can talk to your attorney thanks to the brave librarians known as the Connecticut Four. Call an attorney.</aside>
+national</br>
+security</br>
+letter</br>
+<span style="color: red"><b>WUT!</b></span>
+</section>
+
+<section>
+	<aside class="notes">You should have a policy about how to handle visits from law enforcement, especially for front line staff.</aside>
+<img src="images/getapolicy.gif"></img>
+</section>
+</section>
+
+<section>
+<section>
+	<aside class="notes">Threat models are a way to think about what information you need to protect and how you are going to protect it.
+		Exercise 2:
+			"Let's answer these questions for ourselves... "
+		Exercise 3
+			Break into groups and think sample patron threat models
+	</aside>
+<h3>THREAT MODELS</h3>
+</section>
+
+<section>
+	<aside class="notes">PII is info that can identify individual people. It can do this by itself or with combinations of other info. When think about what you collect, or who you share it with, think about PII which is the most sensitive information. Protecting PII is important!</aside>
+<h3>P<span style=text-transform:lowercase>II</span></h3>
+<p>~</p>
+<p>ersonally dentifiable nformation</p>
+</section>
+
+<section>
+	<aside class="notes">It's best to have a privacy policy that is available to the public. It should explain that data you collect, how you protect it, who you do and don't share it with, and that third parties the library interacts with might not have the same policies. I've included some sample policies. This just a gloss. Your homework is to read these policies, follow the link on the resources page at the end the book, and write a policy for the library. Go!
+		Nashville & Seattle:
+			They warn third parties are going to get your stuff.
+		Nahman-Watson:
+			Compare those to this one, a library is Massachusetts. It is very more detailed, but also has the caveat about third parties.
+	</aside>
+<img src="images/getapolicy.gif"></img>
+</section>
+
+<section>
+	<aside class="notes">You get a bunch of crappy ads. These are annoying and distracting, but if you walk near a hotdog stand you want a notification that hotdogs are on sale right?. Sure. What if  the same scenario was framed as "yes, I will give away my Constitutional 4th amend rights, the rights that made the U.S. the envy of world, to see an ad for hotdogs." This what "personalization" means: surveillence so you can get ads.</aside>
+	<img src="images/ads.png"></img>
+</section>
+
+<section>
+	<aside class="notes">Most malware comes from ads. More sinister are phishing attacks that lead to data breaches or doxing. Hey give us your email? Everytime you do this you expose yourself to more phishing attempts. Types harm that can come from privacy violations: identity theft, medical identity theft, doxing (blackmail, sextortion, swatting), stalking / partner abuse. Which is to say nothing of the qualitive costs: social isolation, emotional costs.</aside>
+	<p style="font-size:60%">malware / phishing / doxing</p>
+	<img src="images/phishing.png"></img>
+</section>
+
+<section>
+	<aside class="notes">Nation-state scale psyops; e.g., targeted disinformation campaigns to manipulate elections. Cambridge Analytica got their data in a clandestine manner, and we know about it because of a whistle blower.</aside>
+	<img src="images/redzuck.png"></img>
+</section>
+
+<section>
+	<aside class="notes">Reverse redlining. This when you deliberately target people in geographic region usually based on demographic charateristics. A notorious example was during the subprime mortage crisis when bad loans were heavily pushed at particular neighborhoods. Mosiac effect can be used to reverse engineer non-PII. You can learn someone's sex, gender, race, political affiliation, income, health info. This can lead to employment, housing, and education discrimination directly or indirectly. In short, all reasons we don't record what people read.</aside>
+	<img src="images/redline.png"></img>
+</section>
+
+<section>
+	<aside class="notes">This is a quote from James English, a developer for LYRASIS. Part of your homework is to write a better a better privacy policy.</aside>
+	"Privacy policies are legal statements to get us out of our ethical obligations."
+</section>
+</section>
+
+<section>
+<section>
+	<aside class="notes">
+		I will try to make this as painless as possible.
+	</aside>
+	<h3>COMPUTER STUFF</h3>
+</section>
+
+<section>
+	<aside class="notes">When we started talking about PII we were already going there, so there is no turning back. ALA has created these handy checklists! Seriously, these are really great and readable and scalable. Perhaps more important than writing a privacy policy, is going through these checklists and applying the criteria to your library.
+
+	There are some core concepts that run through these checklists. These can be applied to most of your duties at the library, or in your personal life, w/r/t privacy. Anything we talk about next can be applied to analog things too, so in that spirit we are going to start by rolling some dice.
+
+	Exercise 4: diceware (part 1)
+</aside>
+<h3>COMPUTER <strike>STUFF</strike></br>
+SECUR<span style=text-transform:lowercase>I</span>TY</h3>
+</section>
+
+<section>
+	<aside class="notes">No one can access things that you don't collect. This principle is extremely important for public computers. Have software that wipes computers between sessions; e.g., Deep Freeze, or configure your browsers to always run in private mode. If you have paper computer logs--shred them. Okay, this next slide has one word on it. When you see it, I want you shout it as loud as you can.  </aside>
+	no logs</br>
+	no masters
+</section>
+
+<section>
+	<aside class="notes">Good job! Does anyone know what it means?</aside>
+	<h3>POLP!</h3>
+</section>
+
+<section>
+	<aside class="notes">The principle of least privilege every user can access only the information and resources they need to do their job.</aside>
+	principle of</br>
+	least</br>priviledge
+</section>
+
+<section>
+	<aside class="notes">Encryption is the process of encoding a message or information in such a way that only authorized parties can access it and those who are not authorized cannot access it.</aside>
+	<h3>ENCRYPT<span style=text-transform:lowercase>I</span>ON</h3>
+</section>
+
+<section>
+	<aside class="notes">Passwords should be as long as possible, contain no identifiable information, and you should have a different one for each site. What?!</aside>
+	<h3>PASSWORDS</h3>
+</section>
+
+<section>
+	<aside class="notes">What?! How in the world would you keep all that straight? Hold my beer.</aside>
+	<h3>PASSWORDS</h3>
+	<span style="color: red"><b>WUT!</b></span>
+</section>
+
+<section>
+<aside class="notes">Exercise 4: diceware (part 2)
+	<img src="images/diceware.png"></img></br>
+"diceware"
+</section>
+
+<section>
+	<img src="images/keepassxc.png"></img></br>
+KeePassXC
+</section>
+
+<section>
+	<img src="images/lastpass.png" width="500" height="180"></img></br>
+LastPass, etc
+</section>
+
+<section>
+	Two Factor Authentication
+</section>
+
+<section>
+	<img src="images/freeotp.png"></img></br>
+FreeOTP
+</section>
+
+<section>
+	<img src="images/freeotpsample.png"></img>
+</section>
+
+<section>
+	<img src="images/yubikey.png"></img></br>
+Yubikey
+</section>
+
+</section>
+
+<section>
+<section>I hope you choose privacy every day.</br>
+</br>
+<small>bryan.n.jones@nashville.gov</small></br>
+</section>
+</section>
+
+<section>
+	<section>
+		<h3>BONUS!</h3>
+</section>
+
+<section>
+	<h3>BROWSERS</h3>
+</section>
+
+<section>
+	<img src="images/torbrowser.png"></img></br>
+Tor Browser
+</section>
+
+<section>
+	Know your settings
+</section>
+
+<section>
+	<img src="images/firefox.png"></img></br>
+Firefox
+</section>
+
+<section>
+	<img src="images/privacybadger.png"></img></br>
+Privacy Badger
+</section>
+
+<section>
+	<img src="images/httpseverywhere.png"></img></br>
+HTTPS Everywhere
+</section>
+
+<section>
+	<img src="images/ublockorigin.png"></img></br>
+uBlock Origin
+</section>
+
+<section>
+	<img src="images/multiaccount.png"></img></br>
+Multi-Account Containers
+</section>
+
+<section>
+	<img src="images/duckduckgo.png"></img></br>
+DuckDuckGo
+</section>
+
+<section>
+	Disk Encryption
+</section>
+
+<section>
+	LUKS</br>
+<small>Linux Unified Key Setup</small>
+</section>
+
+<section>
+	<img src=images/filevault.png></img></br>
+FileVault</br>(OSX)
+</section>
+
+<section>
+	<img src=images/bitlocker.png></img></br>
+BitLocker</br>(Windows)
+</section>
+
+<section>
+	<img src=images/veracrypt.png></img></br>
+Veracrypt
+</section>
+</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
